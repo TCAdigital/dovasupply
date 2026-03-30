@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Phone, Mail } from "lucide-react";
 
 const navLinks = [
@@ -24,8 +25,8 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Top bar with contact info */}
-      <div className={`bg-navy text-white text-xs transition-all duration-300 ${isScrolled ? 'h-0 overflow-hidden opacity-0' : 'py-2 opacity-100'}`}>
+      {/* Top bar */}
+      <div className={`bg-dark text-white text-xs transition-all duration-300 ${isScrolled ? 'h-0 overflow-hidden opacity-0' : 'py-2 opacity-100'}`}>
         <div className="container mx-auto px-6 flex justify-end items-center gap-6">
           <a href="tel:+552136226888" className="flex items-center gap-1.5 hover:text-accent-2 transition-colors">
             <Phone className="w-3 h-3" /> 21 3622-6888
@@ -44,14 +45,15 @@ export function Header() {
       }`}>
         <div className="container mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="flex flex-col">
-              <span className="text-2xl md:text-3xl font-display font-black leading-none text-primary uppercase tracking-tight group-hover:text-accent-1 transition-colors">
-                DOVA
-              </span>
-              <span className="text-[0.6rem] font-sans font-semibold tracking-[0.25em] text-foreground/50 uppercase">
-                Supply
-              </span>
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative h-10 w-28 md:h-12 md:w-36">
+              <Image
+                src="/logo.png"
+                alt="DOVA Supply"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
           </Link>
 

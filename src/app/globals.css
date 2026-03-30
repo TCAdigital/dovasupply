@@ -7,8 +7,7 @@
   --secondary: #9c6c31;
   --accent-1: #b45f31;
   --accent-2: #ffa501;
-  --gold: #C4A000;
-  --navy: #002B5C;
+  --dark: #1e1e1e;
   --muted: #F9FAFB;
   --border: #e5e7eb;
 }
@@ -20,8 +19,7 @@
   --color-secondary: var(--secondary);
   --color-accent-1: var(--accent-1);
   --color-accent-2: var(--accent-2);
-  --color-gold: var(--gold);
-  --color-navy: var(--navy);
+  --color-dark: var(--dark);
   --color-muted: var(--muted);
   --color-border: var(--border);
   
@@ -56,7 +54,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Utility for gold button shine effect */
+/* Gold gradient button */
 .btn-gold {
   background: linear-gradient(135deg, #b45f31 0%, #ffa501 100%);
   color: white;
@@ -90,4 +88,35 @@ html {
 .btn-gold:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(180,95,49,0.3);
+}
+
+/* Hero slow zoom animation */
+@keyframes heroZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+.hero-zoom {
+  animation: heroZoom 20s ease-in-out infinite alternate;
+}
+
+/* WhatsApp pulse animation */
+@keyframes whatsappPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-pulse {
+  animation: whatsappPulse 2s infinite;
 }

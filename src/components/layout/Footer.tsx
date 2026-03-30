@@ -12,7 +12,7 @@ export function Footer() {
   return (
     <>
       {/* Contact Section */}
-      <section id="contato" className="bg-navy py-20">
+      <section id="contato" className="bg-dark py-20">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Left: Contact info */}

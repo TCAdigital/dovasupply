@@ -7,15 +7,15 @@ import { ArrowRight, ChevronDown, ShieldCheck, Clock, Award } from "lucide-react
 export function Hero() {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background image with overlay */}
-      <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      {/* Background image with slow zoom effect */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat hero-zoom"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=80')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1920&q=80')`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/70 to-dark/40" />
       </div>
 
       {/* Content */}
