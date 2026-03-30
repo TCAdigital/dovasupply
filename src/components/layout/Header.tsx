@@ -26,7 +26,7 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Top bar */}
-      <div className={`bg-dark text-white text-xs transition-all duration-300 ${isScrolled ? 'h-0 overflow-hidden opacity-0' : 'py-2 opacity-100'}`}>
+      <div className={`bg-[#6e523c] text-white text-xs transition-all duration-300 ${isScrolled ? 'h-0 overflow-hidden opacity-0' : 'py-2 opacity-100'}`}>
         <div className="container mx-auto px-6 flex justify-end items-center gap-6">
           <a href="tel:+552136226888" className="flex items-center gap-1.5 hover:text-accent-2 transition-colors">
             <Phone className="w-3 h-3" /> 21 3622-6888

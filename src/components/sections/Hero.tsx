@@ -12,7 +12,7 @@ export function Hero() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat hero-zoom"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1920&q=80')`,
+            backgroundImage: `url('https://www.theagilityeffect.com/app/uploads/2020/01/00_VINCI-ICONOGRAPHIE_1280x680-GettyImages-955491344.jpg')`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/70 to-dark/40" />
