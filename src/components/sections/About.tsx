@@ -2,73 +2,171 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { History, Building2, Users2, ShieldCheck } from "lucide-react";
-
-const stats = [
-  { label: "Anos de Tradição", value: "60+", icon: History },
-  { label: "M² de Infraestrutura", value: "2.000", icon: Building2 },
-  { label: "Qualidade de Entrega", value: "100%", icon: ShieldCheck },
-  { label: "Especialistas", value: "Equipe", icon: Users2 },
-];
+import { Check, Building2, Users, TrendingUp } from "lucide-react";
 
 export function About() {
   return (
-    <section id="sobre" className="py-24 bg-white dark:bg-background overflow-hidden">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row gap-20 items-center">
-          <div className="lg:w-1/2 relative">
-             <div className="absolute -top-10 -left-10 w-32 h-32 bg-accent-2/10 rounded-full blur-xl" />
-             <div className="relative z-10 p-1 bg-muted border border-border shadow-2xl">
-                {/* Visual Placeholder for Infrastructure/Team Photo */}
-                <div className="aspect-[4/5] bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center p-12 text-center overflow-hidden">
-                   <div className="w-12 h-1 bg-primary mb-6 mx-auto" />
-                   <p className="text-3xl font-display font-black text-foreground/20 italic">INFRAESTRUTURA: 2.000m² DE ESTOQUE E LOGÍSTICA</p>
-                   <p className="text-xs mt-4 text-primary font-bold tracking-[0.2em] uppercase">SÃO CRISTÓVÃO, RJ</p>
-                </div>
-             </div>
-             {/* Offset Border Graphic */}
-             <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-primary/20 -z-10" />
+    <>
+      {/* Stats Bar */}
+      <section className="bg-navy py-12">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { number: "60+", label: "Anos de Experiência" },
+              { number: "2.000", label: "m² de Infraestrutura" },
+              { number: "24h", label: "Entrega Expressa" },
+              { number: "5.000+", label: "Clientes Atendidos" },
+            ].map((stat, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <p className="text-3xl md:text-4xl font-display font-black text-white mb-1">
+                  {stat.number}
+                </p>
+                <p className="text-white/60 text-sm font-medium">{stat.label}</p>
+              </motion.div>
+            ))}
           </div>
+        </div>
+      </section>
 
-          <div className="lg:w-1/2">
+      {/* About Section */}
+      <section id="sobre" className="py-20 bg-muted">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Image Side */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
+                  alt="Infraestrutura DOVA Supply"
+                  className="w-full h-[500px] object-cover"
+                />
+              </div>
+              {/* Floating badge */}
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-xl p-6 hidden md:block">
+                <p className="text-4xl font-display font-black text-primary">60+</p>
+                <p className="text-sm text-foreground/60 font-medium">Anos no mercado</p>
+              </div>
+            </motion.div>
+
+            {/* Content Side */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-sm font-bold text-accent-1 tracking-[0.3em] uppercase mb-4">Quem Somos</h2>
-              <h3 className="text-4xl md:text-5xl font-display font-black text-foreground uppercase mb-10 leading-tight">
-                Conectando <span className="text-primary italic">experiência</span> para impulsionar seus projetos.
-              </h3>
-              
-              <div className="space-y-6 text-lg text-foreground/70 leading-relaxed font-sans">
-                <p>
-                  Desde 1964, a <span className="font-bold text-foreground">DOVA Supply</span> é referência na distribuição de cabos elétricos, oferecendo soluções ágeis e personalizadas para diversos setores.
-                </p>
-                <p>
-                  Com uma infraestrutura de 2.000 m² e um amplo estoque, garantimos pronta entrega, corte preciso e separação rápida para atender às necessidades dos nossos clientes. Trabalhamos exclusivamente com fabricantes líderes, entregando produtos que seguem rigorosas normas nacionais e internacionais de qualidade e segurança.
-                </p>
-                <p>
-                  Nossa equipe altamente capacitada está preparada para oferecer suporte técnico especializado, auxiliando na especificação e dimensionamento dos cabos para cada aplicação.
-                </p>
+              <p className="text-accent-1 font-bold text-sm tracking-[0.3em] uppercase mb-3">
+                Quem Somos
+              </p>
+              <h2 className="text-3xl md:text-4xl font-display font-black text-foreground mb-6">
+                Tradição e Inovação em Cabos Elétricos
+              </h2>
+              <p className="text-foreground/70 text-lg leading-relaxed mb-8">
+                Desde 1964, a DOVA Supply é referência na distribuição de cabos
+                elétricos especializados. Com sede em São Cristóvão, Rio de
+                Janeiro, operamos em uma infraestrutura de 2.000 m² equipada
+                para atender as demandas mais exigentes do mercado industrial.
+              </p>
+
+              {/* Benefits list */}
+              <div className="space-y-4 mb-8">
+                {[
+                  "Parceria com fabricantes líderes como Wirex, Cafiom e Telecam",
+                  "Pronta entrega e distribuição para todo o Brasil",
+                  "Assistência técnica especializada e consultoria",
+                  "Produtos certificados conforme normas NBR e IEC",
+                ].map((benefit, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <div className="mt-0.5 w-5 h-5 rounded-full bg-accent-2/10 flex items-center justify-center flex-shrink-0">
+                      <Check className="w-3 h-3 text-accent-1" />
+                    </div>
+                    <p className="text-foreground/70 text-sm leading-relaxed">{benefit}</p>
+                  </div>
+                ))}
               </div>
 
-              <div className="grid grid-cols-2 gap-8 mt-16">
-                 {stats.map((stat, idx) => (
-                   <div key={idx} className="group hover:translate-y-[-4px] transition-all duration-300">
-                      <div className="flex items-center gap-3 mb-2">
-                         <stat.icon className="w-5 h-5 text-primary" />
-                         <span className="text-2xl font-display font-black text-foreground">{stat.value}</span>
-                      </div>
-                      <p className="text-xs font-bold text-foreground/40 uppercase tracking-widest">{stat.label}</p>
-                   </div>
-                 ))}
-              </div>
+              <a
+                href="#contato"
+                className="btn-gold px-8 py-4 rounded-lg text-sm tracking-wide inline-flex items-center gap-2"
+              >
+                Conheça Nossa Equipe
+              </a>
             </motion.div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Diferenciais */}
+      <section id="diferenciais" className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <p className="text-accent-1 font-bold text-sm tracking-[0.3em] uppercase mb-3">
+              Por que a DOVA?
+            </p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-black text-foreground mb-4">
+              Nossos Diferenciais
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Building2,
+                title: "Infraestrutura Completa",
+                description: "2.000 m² de área para armazenagem e distribuição eficiente, garantindo agilidade em cada pedido.",
+              },
+              {
+                icon: Users,
+                title: "Equipe Especializada",
+                description: "Profissionais com décadas de experiência prontos para assessorar suas necessidades técnicas.",
+              },
+              {
+                icon: TrendingUp,
+                title: "Agilidade na Entrega",
+                description: "Logística otimizada com pronta entrega para as principais capitais e regiões do Brasil.",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-muted rounded-xl p-8 hover:shadow-lg transition-all duration-300 group"
+              >
+                <div className="w-12 h-12 rounded-lg bg-accent-2/10 flex items-center justify-center mb-6 group-hover:bg-accent-2/20 transition-colors">
+                  <item.icon className="w-6 h-6 text-accent-1" />
+                </div>
+                <h3 className="text-xl font-display font-bold text-foreground mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-foreground/60 leading-relaxed">
+                  {item.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
