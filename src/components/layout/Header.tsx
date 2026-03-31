@@ -40,13 +40,13 @@ export function Header() {
       {/* Main navigation */}
       <nav className={`transition-all duration-300 ${
         isScrolled
-          ? 'bg-white shadow-lg py-3'
-          : 'bg-white/95 backdrop-blur-sm py-4'
+          ? 'bg-white shadow-lg py-5'
+          : 'bg-white/95 backdrop-blur-sm py-6'
       }`}>
         <div className="container mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative h-10 w-28 md:h-12 md:w-36">
+            <div className="relative h-14 w-40 md:h-16 md:w-48">
               <Image
                 src="/logo.png"
                 alt="DOVA Supply"

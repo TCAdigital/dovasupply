@@ -47,9 +47,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-white/80 mb-10 max-w-xl leading-relaxed"
           >
-            Cabos navais, móveis, de controle, instrumentação e potência com
-            qualidade certificada, infraestrutura de 2.000 m² e pronta entrega
-            para todo o Brasil.
+            Cabos navais, para mineração, instrumentação, controle e
+            potência com qualidade certificada e pronta entrega para 
+            <span className="text-accent-2 font-black">todo o Brasil</span>.
           </motion.p>
 
           <motion.div

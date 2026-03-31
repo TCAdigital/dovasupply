@@ -13,8 +13,7 @@ export function About() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { number: "60+", label: "Anos de Experiência" },
-              { number: "2.000", label: "m² de Infraestrutura" },
-              { number: "24h", label: "Entrega Expressa" },
+              { number: "Pronta", label: "Entrega de Cabos" },
               { number: "5.000+", label: "Clientes Atendidos" },
             ].map((stat, i) => (
               <motion.div
@@ -75,10 +74,15 @@ export function About() {
                 Tradição e Inovação em Cabos Elétricos
               </h2>
               <p className="text-foreground/70 text-lg leading-relaxed mb-8">
-                Desde 1964, a DOVA Supply é referência na distribuição de cabos
-                elétricos especializados. Com sede em São Cristóvão, Rio de
-                Janeiro, operamos em uma infraestrutura de 2.000 m² equipada
-                para atender as demandas mais exigentes do mercado industrial.
+                Há mais de 60 anos oferecendo as melhores soluções em 
+                condutores elétricos para projetos industriais em <span className="text-accent-2 font-bold italic">todo o Brasil</span>. 
+                Nossa linha de produtos inclui cabos certificados de baixa e 
+                média tensão, cabos para uso naval e em plataformas 
+                petrolíferas, cabos para uso móvel em máquinas e equipamentos 
+                da indústria de mineração, além de cabos de instrumentação 
+                e controle. Com qualidade e expertise, garantimos soluções 
+                elétricas que atendem aos mais altos padrões do mercado, 
+                energizando projetos e conectando o futuro.
               </p>
 
               {/* Benefits list */}
@@ -132,7 +136,7 @@ export function About() {
               {
                 icon: Building2,
                 title: "Infraestrutura Completa",
-                description: "2.000 m² de área para armazenagem e distribuição eficiente, garantindo agilidade em cada pedido.",
+                description: "Ampla área para armazenagem e distribuição eficiente, garantindo agilidade em cada pedido.",
               },
               {
                 icon: Users,

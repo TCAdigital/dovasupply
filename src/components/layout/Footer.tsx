@@ -11,6 +11,42 @@ export function Footer() {
 
   return (
     <>
+      {/* Partnerships Section */}
+      <section className="bg-white py-16 border-t border-border">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="text-secondary font-bold text-sm tracking-[0.3em] uppercase mb-3">
+              Nossas Parcerias
+            </p>
+            <h2 className="text-2xl md:text-3xl font-display font-black text-foreground">
+              Trabalhamos com os Melhores
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+            {[
+              { name: "Poliron", url: "https://poliron.com.br" },
+              { name: "Cofibam", url: "https://www.cofibam.com.br" },
+              { name: "Dacota", url: "https://dacotace.com.br" }
+            ].map((partner) => (
+              <a
+                key={partner.name}
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center justify-center grayscale hover:grayscale-0 transition-all duration-500"
+              >
+                <div className="px-8 py-6 bg-muted rounded-xl w-full flex items-center justify-center border border-transparent group-hover:border-accent-2/30 group-hover:bg-white group-hover:shadow-xl transition-all">
+                  <span className="text-2xl md:text-3xl font-display font-black text-foreground/40 group-hover:text-primary transition-colors tracking-tighter uppercase">
+                    {partner.name}
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contato" className="bg-dark py-20">
         <div className="container mx-auto px-6">
