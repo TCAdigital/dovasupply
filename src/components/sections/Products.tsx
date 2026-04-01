@@ -2,43 +2,57 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Anchor, Smartphone, Gauge, Waves, Zap, ArrowUpRight } from "lucide-react";
+import { Anchor, Gauge, Zap, Share2, Thermometer, ShieldCheck, Package, ArrowUpRight } from "lucide-react";
 
 const products = [
   {
-    title: "Cabos Navais e Offshore",
-    description: "Certificados para máxima durabilidade em ambientes marítimos e plataformas petrolíferas.",
-    label: "Naval",
-    icon: Anchor,
-    image: "https://images.unsplash.com/photo-1605745341112-85968b19335b?auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    title: "Cabos de Mineração",
-    description: "Cabos para uso móvel em máquinas e equipamentos pesados da indústria de mineração.",
-    label: "Industrial",
-    icon: Smartphone,
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    title: "Instrumentação e Controle",
-    description: "Precisão absoluta na transmissão de sinais para sistemas automatizados.",
-    label: "Automação",
+    title: "Cabos de Instrumentação",
+    description: "Transmissão de sinais analógicos e digitais com máxima precisão e confiabilidade.",
+    label: "Precisão",
     icon: Gauge,
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: "Acessórios e Ferramentas",
-    description: "Linha completa de terminais, conectores e ferramentas para instalações elétricas.",
-    label: "Infraestrutura",
-    icon: Waves,
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=600&q=80",
+    title: "Cabos de Controle",
+    description: "Ideal para automação industrial, medição e comando de equipamentos.",
+    label: "Automação",
+    icon: ShieldCheck,
+    image: "https://images.unsplash.com/photo-1581093191147-73d7ade45d8b?auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: "Cabos de Potência",
-    description: "Certificados de baixa e média tensão para distribuição segura de energia industrial.",
-    label: "Energia",
+    title: "Cabos de Energia",
+    description: "Alta confiabilidade para distribuição elétrica em baixa e média tensão.",
+    label: "Potência",
     icon: Zap,
-    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Protocolos de Comunicação",
+    description: "Conectividade robusta para Fieldbus, Profibus e redes industriais avançadas.",
+    label: "Redes",
+    icon: Share2,
+    image: "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Cabos Termopar",
+    description: "Próprios para extensão e compensação de sensores de temperatura críticos.",
+    label: "Térmico",
+    icon: Thermometer,
+    image: "https://images.unsplash.com/photo-1621905235215-60ba840d5885?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Cabo Naval",
+    description: "Certificados para máxima durabilidade em ambientes marítimos e offshore.",
+    label: "Certificado",
+    icon: Anchor,
+    image: "https://images.unsplash.com/photo-1605745341112-85968b19335b?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Outros Produtos",
+    description: "Linha completa de condutores e acessórios especializados para sua indústria.",
+    label: "Soluções",
+    icon: Package,
+    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
