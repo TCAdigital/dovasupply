@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Check, Building2, Users, TrendingUp } from "lucide-react";
+import { Check, Award, Truck, Users, UserCheck, Building2, TrendingUp } from "lucide-react";
 
 export function About() {
   return (
@@ -10,11 +10,12 @@ export function About() {
       {/* Stats Bar */}
       <section className="bg-gradient-to-br from-[#b45f31] to-[#ffa501] py-12">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { number: "60+", label: "Anos de Experiência" },
-              { number: "Pronta", label: "Entrega de Cabos" },
-              { number: "5.000+", label: "Clientes Atendidos" },
+              { icon: Award, number: "60+", label: "Anos de Experiência" },
+              { icon: Truck, number: "Pronta", label: "Entrega de Cabos" },
+              { icon: Users, number: "5.000+", label: "Clientes Atendidos" },
+              { icon: UserCheck, number: "Equipe", label: "Especializada" },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -22,12 +23,15 @@ export function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className="text-center group"
               >
+                <div className="flex justify-center mb-4">
+                  <stat.icon className="w-8 h-8 text-white/90 group-hover:scale-110 transition-transform duration-300" />
+                </div>
                 <p className="text-3xl md:text-4xl font-display font-black text-white mb-1">
                   {stat.number}
                 </p>
-                <p className="text-white/60 text-sm font-medium">{stat.label}</p>
+                <p className="text-white/80 text-xs md:text-sm font-medium uppercase tracking-wider">{stat.label}</p>
               </motion.div>
             ))}
           </div>

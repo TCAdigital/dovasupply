@@ -25,9 +25,9 @@ export function Footer() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
             {[
-              { name: "Poliron", url: "https://poliron.com.br" },
-              { name: "Cofibam", url: "https://www.cofibam.com.br" },
-              { name: "Dacota", url: "https://dacotace.com.br" }
+              { name: "Poliron", url: "https://poliron.com.br", logo: "/images/partners/poliron.png" },
+              { name: "Cofibam", url: "https://www.cofibam.com.br", logo: "/images/partners/cofibam.png" },
+              { name: "Dacota", url: "https://dacotace.com.br", logo: "/images/partners/dacota.png" }
             ].map((partner) => (
               <a
                 key={partner.name}
@@ -36,10 +36,12 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center justify-center grayscale hover:grayscale-0 transition-all duration-500"
               >
-                <div className="px-8 py-6 bg-muted rounded-xl w-full flex items-center justify-center border border-transparent group-hover:border-accent-2/30 group-hover:bg-white group-hover:shadow-xl transition-all">
-                  <span className="text-2xl md:text-3xl font-display font-black text-foreground/40 group-hover:text-primary transition-colors tracking-tighter uppercase">
-                    {partner.name}
-                  </span>
+                <div className="px-8 py-6 bg-muted rounded-xl w-full h-32 flex items-center justify-center border border-transparent group-hover:border-accent-2/30 group-hover:bg-white group-hover:shadow-xl transition-all">
+                  <img 
+                    src={partner.logo} 
+                    alt={partner.name}
+                    className="max-h-16 w-auto object-contain transition-transform duration-500 group-hover:scale-110"
+                  />
                 </div>
               </a>
             ))}
