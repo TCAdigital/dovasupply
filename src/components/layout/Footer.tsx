@@ -12,7 +12,7 @@ export function Footer() {
   return (
     <>
       {/* Partnerships Section */}
-      <section className="bg-white py-16 border-t border-border">
+      <section id="parceiros" className="bg-white py-16 border-t border-border">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <p className="text-accent-2 font-bold text-sm tracking-[0.3em] uppercase mb-3">

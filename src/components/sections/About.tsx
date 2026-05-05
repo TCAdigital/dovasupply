@@ -106,12 +106,20 @@ export function About() {
                 ))}
               </div>
 
-              <a
-                href="#contato"
-                className="btn-gold px-8 py-4 rounded-lg text-sm tracking-wide inline-flex items-center gap-2"
-              >
-                Conheça Nossa Equipe
-              </a>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="#contato"
+                  className="btn-gold px-8 py-4 rounded-lg text-sm tracking-wide inline-flex items-center gap-2"
+                >
+                  Conheça Nossa Equipe
+                </a>
+                <a
+                  href="#parceiros"
+                  className="px-8 py-4 border-2 border-primary/20 text-primary font-bold rounded-lg text-sm tracking-wide hover:bg-primary/5 transition-all inline-flex items-center gap-2"
+                >
+                  NOSSOS PARCEIROS
+                </a>
+              </div>
             </motion.div>
           </div>
         </div>
