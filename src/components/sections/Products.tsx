@@ -24,7 +24,7 @@ const products = [
     description: "Alta confiabilidade para distribuição elétrica em baixa e média tensão.",
     label: "Potência",
     icon: Zap,
-    image: "https://media.istockphoto.com/photos/electricity-picture-id695512934?k=6&m=695512934&s=612x612&w=0&h=A_2_Y3Td_4eRX9fkNUQ-pDP5F2n1aOXVG4x0kFTMXYw=",
+    image: "https://images.unsplash.com/photo-1558486012-817176f84c6d?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Protocolos de Comunicação",
@@ -38,7 +38,7 @@ const products = [
     description: "Próprios para extensão e compensação de sensores de temperatura críticos.",
     label: "Térmico",
     icon: Thermometer,
-    image: "https://images.unsplash.com/photo-1621905235215-60ba840d5885?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1618218168350-6e7c81d50988?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Cabo Naval",
