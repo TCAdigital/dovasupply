@@ -24,7 +24,7 @@ const products = [
     description: "Alta confiabilidade para distribuição elétrica em baixa e média tensão.",
     label: "Potência",
     icon: Zap,
-    image: "https://images.unsplash.com/photo-1558486012-817176f84c6d?auto=format&fit=crop&w=800&q=80",
+    image: "https://www.marketresearchintellect.com/images/blogs/top-electricity-power-cables.webp",
   },
   {
     title: "Protocolos de Comunicação",
@@ -38,7 +38,7 @@ const products = [
     description: "Próprios para extensão e compensação de sensores de temperatura críticos.",
     label: "Térmico",
     icon: Thermometer,
-    image: "https://images.unsplash.com/photo-1618218168350-6e7c81d50988?auto=format&fit=crop&w=800&q=80",
+    image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m130cnifrk7y2e",
   },
   {
     title: "Cabo Naval",
@@ -52,7 +52,7 @@ const products = [
     description: "Linha completa de condutores e acessórios especializados para sua indústria.",
     label: "Soluções",
     icon: Package,
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80",
+    image: "https://generacbrasil.com.br/wp-content/uploads/2022/03/cores-cabos-eletricos_5e32d2c7273a4.jpg",
   },
 ];
 
