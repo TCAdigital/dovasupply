@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Mail, Phone, MapPin, ArrowUp, Globe, Share2 } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUp } from "lucide-react";
 
 export function Footer() {
   const scrollToTop = () => {
@@ -15,7 +15,7 @@ export function Footer() {
       <section className="bg-white py-16 border-t border-border">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-secondary font-bold text-sm tracking-[0.3em] uppercase mb-3">
+            <p className="text-accent-2 font-bold text-sm tracking-[0.3em] uppercase mb-3">
               Nossas Parcerias
             </p>
             <h2 className="text-2xl md:text-3xl font-display font-black text-foreground">
@@ -23,25 +23,42 @@ export function Footer() {
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center">
             {[
               { name: "Poliron", url: "https://poliron.com.br", logo: "/images/partners/poliron.png" },
               { name: "Cofibam", url: "https://www.cofibam.com.br", logo: "/images/partners/cofibam.png" },
-              { name: "Dacota", url: "https://dacotace.com.br", logo: "/images/partners/dacota.png" }
+              { name: "Dacota", url: "https://dacotace.com.br", logo: "/images/partners/dacota.png" },
+              { name: "Condvolt", url: "https://www.condvolt.com.br" },
+              { name: "Pan Eletric", url: "https://www.pan.com.br" },
+              { name: "Telecam", url: "https://www.telecamcabos.com.br" },
+              { name: "Conduferes", url: "https://www.conduferes.com.br" },
+              { name: "Datalink", url: "https://www.afdatalink.com.br" },
+              { name: "Induscabos", url: "https://www.induscabos.com.br" },
+              { name: "Cabelauto", url: "https://www.cabelauto.com.br" },
+              { name: "Cobremack", url: "#" },
+              { name: "Conduspar", url: "#" },
+              { name: "Cobrecom", url: "https://www.cobrecom.com.br" },
+              { name: "Nambei", url: "https://www.nambei.com.br" },
             ].map((partner) => (
               <a
                 key={partner.name}
                 href={partner.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col items-center justify-center grayscale hover:grayscale-0 transition-all duration-500"
+                className="group flex flex-col items-center justify-center transition-all duration-500"
               >
-                <div className="px-8 py-6 bg-muted rounded-xl w-full h-32 flex items-center justify-center border border-transparent group-hover:border-accent-2/30 group-hover:bg-white group-hover:shadow-xl transition-all">
-                  <img 
-                    src={partner.logo} 
-                    alt={partner.name}
-                    className="max-h-16 w-auto object-contain transition-transform duration-500 group-hover:scale-110"
-                  />
+                <div className="px-4 py-4 bg-white rounded-xl w-full h-24 flex items-center justify-center border border-border group-hover:border-accent-2/30 group-hover:shadow-xl transition-all">
+                  {partner.logo ? (
+                    <img 
+                      src={partner.logo} 
+                      alt={partner.name}
+                      className="max-h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-110"
+                    />
+                  ) : (
+                    <span className="text-foreground/40 font-display font-black text-xs tracking-tighter group-hover:text-primary transition-colors text-center">
+                      {partner.name.toUpperCase()}
+                    </span>
+                  )}
                 </div>
               </a>
             ))}
@@ -105,7 +122,22 @@ export function Footer() {
                   title="Instagram"
                   className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent-2/20 transition-colors"
                 >
-                  <Globe className="w-5 h-5 text-white" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-5 h-5 text-white"
+                  >
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                  </svg>
                 </a>
                 <a
                   href="https://linkedin.com/company/dova-supply"
@@ -114,7 +146,22 @@ export function Footer() {
                   title="LinkedIn"
                   className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent-2/20 transition-colors"
                 >
-                  <Share2 className="w-5 h-5 text-white" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-5 h-5 text-white"
+                  >
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect width="4" height="12" x="2" y="9" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -219,9 +266,22 @@ export function Footer() {
 
           {/* Bottom bar */}
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/30 text-sm">
-              © {new Date().getFullYear()} DOVA Supply. Todos os direitos reservados.
-            </p>
+            <div className="flex flex-col items-center md:items-start gap-1">
+              <p className="text-white/30 text-sm">
+                © {new Date().getFullYear()} DOVA Supply. Todos os direitos reservados.
+              </p>
+              <p className="text-white/20 text-[10px] tracking-wider uppercase">
+                Desenvolvido com amor ❤️ pela{" "}
+                <a 
+                  href="https://tcadigital.com.br" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-accent-2 transition-colors"
+                >
+                  TCA Digital Ai-Driven
+                </a>
+              </p>
+            </div>
             <button
               onClick={scrollToTop}
               className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent-2/20 transition-colors"

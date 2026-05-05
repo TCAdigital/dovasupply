@@ -92,7 +92,7 @@ export function About() {
               {/* Benefits list */}
               <div className="space-y-4 mb-8">
                 {[
-                  "Parceria com fabricantes líderes como Wirex, Cafiom e Telecam",
+                  "Parceria com fabricantes líderes como Poliron, Cofibam e Dacota",
                   "Pronta entrega e distribuição para todo o Brasil",
                   "Assistência técnica especializada e consultoria",
                   "Produtos certificados conforme normas NBR e IEC",

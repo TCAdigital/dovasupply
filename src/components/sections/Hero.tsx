@@ -48,8 +48,7 @@ export function Hero() {
             className="text-lg text-white/80 mb-10 max-w-xl leading-relaxed"
           >
             Cabos navais, para mineração, instrumentação, controle e
-            potência com qualidade certificada e pronta entrega para 
-            <span className="text-accent-2 font-black">todo o Brasil</span>.
+            potência com qualidade certificada e pronta entrega para <span className="text-accent-2 font-black">todo o Brasil</span>.
           </motion.p>
 
           <motion.div
